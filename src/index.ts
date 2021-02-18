@@ -8,6 +8,7 @@ import { LNBitsTPoSClass } from './tpos';
 interface LNBitsConfig {
   adminKey: string;
   invoiceReadKey: string;
+  endpoint?: string;
 }
 
 interface LNBits {

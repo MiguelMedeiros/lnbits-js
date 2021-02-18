@@ -1,8 +1,9 @@
-import axios, { AxiosInstance, AxiosError } from 'axios';
+import axios, { AxiosError, AxiosInstance } from 'axios';
 
 interface LNBitsConfig {
   adminKey: string;
   invoiceReadKey: string;
+  endpoint?: string;
 }
 
 interface WalletDetails {
@@ -29,13 +30,15 @@ interface CheckInvoice {
 export class LNBitsWalletClass {
   private adminKey = '';
   private invoiceReadKey = '';
+  private endpoint = 'https://lnbits.com';
   private api: AxiosInstance;
 
   constructor(params: LNBitsConfig) {
     this.adminKey = params.adminKey;
     this.invoiceReadKey = params.invoiceReadKey;
+    this.endpoint = params.endpoint || this.endpoint;
     this.api = axios.create({
-      baseURL: 'https://lnbits.com/api/v1',
+      baseURL: `${this.endpoint}/api/v1`,
       headers: {
         'Content-Type': 'application/json',
       },
@@ -49,8 +52,8 @@ export class LNBitsWalletClass {
       .then((res: { data: WalletDetails }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
@@ -71,8 +74,8 @@ export class LNBitsWalletClass {
       .then((res: { data: CreateInvoice }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
@@ -91,8 +94,8 @@ export class LNBitsWalletClass {
       .then((res: { data: PayInvoice }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
@@ -105,8 +108,8 @@ export class LNBitsWalletClass {
       .then((res: { data: CheckInvoice }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 }

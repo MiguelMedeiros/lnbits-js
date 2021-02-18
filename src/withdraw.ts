@@ -1,8 +1,9 @@
-import axios, { AxiosInstance, AxiosError } from 'axios';
+import axios, { AxiosError, AxiosInstance } from 'axios';
 
 interface LNBitsConfig {
   adminKey: string;
   invoiceReadKey: string;
+  endpoint?: string;
 }
 
 interface Links {
@@ -26,13 +27,15 @@ interface Links {
 export class LNBitsWithdrawClass {
   private adminKey = '';
   private invoiceReadKey = '';
+  private endpoint = 'https://lnbits.com';
   private api: AxiosInstance;
 
   constructor(params: LNBitsConfig) {
     this.adminKey = params.adminKey;
     this.invoiceReadKey = params.invoiceReadKey;
+    this.endpoint = params.endpoint || this.endpoint;
     this.api = axios.create({
-      baseURL: 'https://lnbits.com/withdraw/api/v1',
+      baseURL: `${this.endpoint}/withdraw/api/v1`,
       headers: {
         'Content-Type': 'application/json',
       },
@@ -50,8 +53,8 @@ export class LNBitsWithdrawClass {
       .then((res: { data: Links[] }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
@@ -69,8 +72,8 @@ export class LNBitsWithdrawClass {
       .then((res: { data: Links }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
@@ -89,8 +92,8 @@ export class LNBitsWithdrawClass {
       .then((res: { data: Links }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 

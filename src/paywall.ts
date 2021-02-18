@@ -1,8 +1,9 @@
-import axios, { AxiosInstance, AxiosError } from 'axios';
+import axios, { AxiosError, AxiosInstance } from 'axios';
 
 interface LNBitsConfig {
   adminKey: string;
   invoiceReadKey: string;
+  endpoint?: string;
 }
 
 interface Paywalls {
@@ -41,13 +42,15 @@ interface InvoiceCheck {
 export class LNBitsPaywallClass {
   private adminKey = '';
   private invoiceReadKey = '';
+  private endpoint = 'https://lnbits.com';
   private api: AxiosInstance;
 
   constructor(params: LNBitsConfig) {
     this.adminKey = params.adminKey;
     this.invoiceReadKey = params.invoiceReadKey;
+    this.endpoint = params.endpoint || this.endpoint;
     this.api = axios.create({
-      baseURL: 'https://lnbits.com/paywall/api/v1',
+      baseURL: `${this.endpoint}/paywall/api/v1`,
       headers: {
         'Content-Type': 'application/json',
       },
@@ -61,8 +64,8 @@ export class LNBitsPaywallClass {
       .then((res: { data: Paywalls[] }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
@@ -79,8 +82,8 @@ export class LNBitsPaywallClass {
       .then((res: { data: CreatePaywall }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
@@ -94,8 +97,8 @@ export class LNBitsPaywallClass {
       .then((res: { data: Invoice }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
@@ -109,8 +112,8 @@ export class LNBitsPaywallClass {
       .then((res: { data: InvoiceCheck }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 

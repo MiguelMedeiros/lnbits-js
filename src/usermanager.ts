@@ -1,8 +1,9 @@
-import axios, { AxiosInstance, AxiosError, AxiosResponse } from 'axios';
+import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
 
 interface LNBitsConfig {
   adminKey: string;
   invoiceReadKey: string;
+  endpoint?: string;
 }
 
 interface Users {
@@ -15,12 +16,14 @@ interface Users {
 
 export class LNBitsUserManagerClass {
   private invoiceReadKey = '';
+  private endpoint = 'https://lnbits.com';
   private api: AxiosInstance;
 
   constructor(params: LNBitsConfig) {
     this.invoiceReadKey = params.invoiceReadKey;
+    this.endpoint = params.endpoint || this.endpoint;
     this.api = axios.create({
-      baseURL: 'https://lnbits.com/usermanager/api/v1',
+      baseURL: `${this.endpoint}/usermanager/api/v1`,
       headers: {
         'Content-Type': 'application/json',
       },
@@ -34,8 +37,8 @@ export class LNBitsUserManagerClass {
       .then((res: { data: Users[] }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
@@ -50,8 +53,8 @@ export class LNBitsUserManagerClass {
       .then((res: { data: Users[] }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
@@ -62,8 +65,8 @@ export class LNBitsUserManagerClass {
       .then((res: { data: Users[] }) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
@@ -118,8 +121,8 @@ export class LNBitsUserManagerClass {
       .then((res: AxiosResponse) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 }
