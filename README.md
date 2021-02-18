@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/lnbits.svg?style=flat-square)](https://www.npmjs.org/package/lnbits)
 [![NPM](https://img.shields.io/david/MiguelMedeiros/lnbits-js.svg?style=flat-square)](https://david-dm.org/MiguelMedeiros/lnbits-js#info=dependencies)
-[![Known Vulnerabilities](https://snyk.io/test/github/MiguelMedeiros/lnbits/badge.svg?style=flat-square)](https://snyk.io/test/github/MiguelMedeiros/lnbits-js)
+[![Known Vulnerabilities](https://snyk.io/test/github/MiguelMedeiros/lnbits-js/badge.svg?style=flat-square)](https://snyk.io/test/github/MiguelMedeiros/lnbits-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 ---
