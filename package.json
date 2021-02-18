@@ -1,6 +1,6 @@
 {
   "name": "lnbits",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NPM Package for LNBits.com API.",
   "main": "lib/index.js",
   "author": "MiguelMedeiros\\Miguel Medeiros <miguel@miguelmedeiros.com.br>",
