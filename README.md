@@ -1,4 +1,4 @@
-# LNBits JS API
+# **LNBits JS API**
 
 [![npm version](https://img.shields.io/npm/v/lnbits.svg?style=flat-square)](https://www.npmjs.org/package/lnbits)
 [![NPM](https://img.shields.io/david/MiguelMedeiros/lnbits.svg?style=flat-square)](https://david-dm.org/MiguelMedeiros/lnbits#info=dependencies)
@@ -11,15 +11,14 @@ Easy way to add LNBits API to your JS application.
 
 ---
 
-## References
+## **References**
 
 - LNBits Website: [https://lnbits.com](https://lnbits.com)
 - LNBits Telegram Group: [https://t.me/lnbits](https://t.me/lnbits)
-- Author of this repository: [https://miguelmedeiros.com.br](https://miguelmedeiros.com.br)
 
 ---
 
-## Donate
+## **Donate**
 
 Help me to stack sats! :blush:
 
@@ -29,7 +28,7 @@ Help me to stack sats! :blush:
 
 ---
 
-## Features
+## **Features**
 
 - [References](#references)
 - [Donate](#donate)
@@ -69,7 +68,7 @@ Help me to stack sats! :blush:
 
 ---
 
-## Installation
+## **Installation**
 
 Using npm:
 
@@ -85,9 +84,9 @@ $ yarn add lnbits
 
 ---
 
-## Usage
+## **Usage**
 
-### Initial Configuration
+### **Initial Configuration**
 
 ```javascript
 import LNBits from 'lnbits';
@@ -100,9 +99,9 @@ const { wallet, userManager, paywall, withdraw, paylink, tpos } = LNBits({
 
 <br/>
 
-### Wallet
+### **Wallet**
 
-#### Wallet Details
+#### **Wallet Details**
 
 [ [Example](examples/wallet.ts) ] [ [top](#donate) ]
 
@@ -113,7 +112,7 @@ console.log(walletDetails);
 
 <br/>
 
-#### Create Invoice
+#### **Create Invoice**
 
 [ [Example](examples/wallet.ts) ] [ [top](#donate) ]
 
@@ -135,7 +134,7 @@ console.log(newInvoice);
 
 <br/>
 
-#### Pay Invoice
+#### **Pay Invoice**
 
 [ [Example](examples/wallet.ts) ] [ [top](#donate) ]
 
@@ -155,7 +154,7 @@ console.log(newPayInvoice);
 
 <br/>
 
-#### Check Invoice
+#### **Check Invoice**
 
 [ [Example](examples/wallet.ts) ] [ [top](#donate) ]
 
@@ -173,9 +172,9 @@ console.log(checkinvoice);
 
 <br/>
 
-### User Manager
+### **User Manager**
 
-#### Get Users
+#### **Get Users**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -186,7 +185,7 @@ console.log(users);
 
 <br/>
 
-#### Get Wallets
+#### **Get Wallets**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -204,7 +203,7 @@ console.log(wallets);
 
 <br/>
 
-#### Get Transactions
+#### **Get Transactions**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -222,7 +221,7 @@ console.log(tx);
 
 <br/>
 
-#### Create User
+#### **Create User**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -244,7 +243,7 @@ console.log(user);
 
 <br/>
 
-#### Delete User
+#### **Delete User**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -262,7 +261,7 @@ console.log(userDeleted);
 
 <br/>
 
-#### Delete Wallet
+#### **Delete Wallet**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -280,7 +279,7 @@ console.log(walletDeleted);
 
 <br/>
 
-#### Active Extension
+#### **Active Extension**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -302,9 +301,9 @@ console.log(extension);
 
 <br/>
 
-### Paywall
+### **Paywall**
 
-#### Get Paywalls
+#### **Get Paywalls**
 
 [ [Example](examples/paywall.ts) ] [ [top](#donate) ]
 
@@ -315,7 +314,7 @@ console.log(paywalls);
 
 <br/>
 
-#### Create Paywall
+#### **Create Paywall**
 
 [ [Example](examples/paywall.ts) ] [ [top](#donate) ]
 
@@ -341,7 +340,7 @@ console.log(paywallNew);
 
 <br/>
 
-#### Create Invoice
+#### **Create Invoice**
 
 [ [Example](examples/paywall.ts) ] [ [top](#donate) ]
 
@@ -361,7 +360,7 @@ console.log(invoice);
 
 <br/>
 
-#### Check Invoice
+#### **Check Invoice**
 
 [ [Example](examples/paywall.ts) ] [ [top](#donate) ]
 
@@ -382,7 +381,7 @@ console.log(invoiceCheck);
 
 <br/>
 
-#### Delete Paywall
+#### **Delete Paywall**
 
 [ [Example](examples/paywall.ts) ] [ [top](#donate) ]
 
@@ -400,9 +399,9 @@ console.log(paywallDeleted);
 
 <br/>
 
-### Withdraw
+### **Withdraw**
 
-#### Get Links
+#### **Get Links**
 
 [ [Example](examples/withdraw.ts) ] [ [top](#donate) ]
 
@@ -415,7 +414,7 @@ console.log(withdrawLinks);
 
 <br/>
 
-#### Create Link
+#### **Create Link**
 
 [ [Example](examples/withdraw.ts) ] [ [top](#donate) ]
 
@@ -443,7 +442,7 @@ console.log(link);
 
 <br/>
 
-#### Update Link
+#### **Update Link**
 
 [ [Example](examples/withdraw.ts) ] [ [top](#donate) ]
 
@@ -473,7 +472,7 @@ console.log(linkUpdated);
 
 <br/>
 
-#### Delete Link
+#### **Delete Link**
 
 [ [Example](examples/withdraw.ts) ] [ [top](#donate) ]
 
@@ -491,9 +490,9 @@ console.log(linkDeleted);
 
 <br/>
 
-### TPoS
+### **TPoS**
 
-#### Get TPoS
+#### **Get TPoS**
 
 [ [Example](examples/tpos.ts) ] [ [top](#donate) ]
 
@@ -504,7 +503,7 @@ console.log(tposs);
 
 <br/>
 
-#### Create TPoS
+#### **Create TPoS**
 
 [ [Example](examples/tpos.ts) ] [ [top](#donate) ]
 
@@ -524,7 +523,7 @@ console.log(tposNew);
 
 <br/>
 
-#### Delete TPoS
+#### **Delete TPoS**
 
 [ [Example](examples/tpos.ts) ] [ [top](#donate) ]
 
@@ -542,12 +541,10 @@ console.log(tposDeleted);
 
 ---
 
-## Contributing
+## **Contributing**
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
 ---
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+## **License [MIT](https://choosealicense.com/licenses/mit/)**
