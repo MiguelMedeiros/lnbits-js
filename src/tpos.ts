@@ -35,8 +35,8 @@ export class LNBitsTPoSClass {
       .then((res: { data: TPoS[] }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
@@ -50,8 +50,8 @@ export class LNBitsTPoSClass {
       .then((res: { data: TPoS }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 

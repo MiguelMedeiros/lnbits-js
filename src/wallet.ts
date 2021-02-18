@@ -49,8 +49,8 @@ export class LNBitsWalletClass {
       .then((res: { data: WalletDetails }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
@@ -71,8 +71,8 @@ export class LNBitsWalletClass {
       .then((res: { data: CreateInvoice }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
@@ -91,8 +91,8 @@ export class LNBitsWalletClass {
       .then((res: { data: PayInvoice }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
@@ -105,8 +105,8 @@ export class LNBitsWalletClass {
       .then((res: { data: CheckInvoice }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 }

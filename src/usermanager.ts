@@ -34,8 +34,8 @@ export class LNBitsUserManagerClass {
       .then((res: { data: Users[] }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
@@ -50,8 +50,8 @@ export class LNBitsUserManagerClass {
       .then((res: { data: Users[] }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
@@ -62,8 +62,8 @@ export class LNBitsUserManagerClass {
       .then((res: { data: Users[] }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
@@ -78,8 +78,8 @@ export class LNBitsUserManagerClass {
       .then((res: { data: Users[] }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
@@ -91,7 +91,6 @@ export class LNBitsUserManagerClass {
         return true;
       })
       .catch(() => {
-        // throw err;
         return false;
       });
   };
@@ -104,7 +103,6 @@ export class LNBitsUserManagerClass {
         return true;
       })
       .catch(() => {
-        // throw err;
         return false;
       });
   };
@@ -120,8 +118,8 @@ export class LNBitsUserManagerClass {
       .then((res: AxiosResponse) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 }

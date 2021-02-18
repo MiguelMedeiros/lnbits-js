@@ -45,7 +45,6 @@ export class LNBitsPaylinkClass {
         return res.data;
       })
       .catch((err: { response: { data: { message: string } } }) => {
-        console.log(err.response.data);
         throw err.response.data.message;
       });
   };
@@ -58,7 +57,6 @@ export class LNBitsPaylinkClass {
         return res.data;
       })
       .catch((err: { response: { data: { message: string } } }) => {
-        console.log(err.response.data);
         throw err.response.data.message;
       });
   };
@@ -77,7 +75,6 @@ export class LNBitsPaylinkClass {
         return res.data;
       })
       .catch((err: { response: { data: { message: string } } }) => {
-        console.log(err.response.data);
         throw err.response.data.message;
       });
   };
@@ -97,7 +94,6 @@ export class LNBitsPaylinkClass {
         return res.data;
       })
       .catch((err: { response: { data: { message: string } } }) => {
-        console.log(err.response.data);
         throw err.response.data.message;
       });
   };

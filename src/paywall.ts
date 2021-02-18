@@ -61,8 +61,8 @@ export class LNBitsPaywallClass {
       .then((res: { data: Paywalls[] }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
@@ -79,8 +79,8 @@ export class LNBitsPaywallClass {
       .then((res: { data: CreatePaywall }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
@@ -94,8 +94,8 @@ export class LNBitsPaywallClass {
       .then((res: { data: Invoice }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
@@ -109,8 +109,8 @@ export class LNBitsPaywallClass {
       .then((res: { data: InvoiceCheck }) => {
         return res.data;
       })
-      .catch((err: AxiosError) => {
-        throw err;
+      .catch((err: { response: { data: { message: string } } }) => {
+        throw err.response.data.message;
       });
   };
 
