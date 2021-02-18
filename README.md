@@ -101,7 +101,7 @@ const { wallet, userManager, paywall, withdraw, paylink, tpos } = LNBits({
 
 ### **Wallet**
 
-#### **Wallet Details**
+### **Wallet Details**
 
 [ [Example](examples/wallet.ts) ] [ [top](#donate) ]
 
@@ -112,7 +112,7 @@ console.log(walletDetails);
 
 <br/>
 
-#### **Create Invoice**
+### **Create Invoice**
 
 [ [Example](examples/wallet.ts) ] [ [top](#donate) ]
 
@@ -134,7 +134,7 @@ console.log(newInvoice);
 
 <br/>
 
-#### **Pay Invoice**
+### **Pay Invoice**
 
 [ [Example](examples/wallet.ts) ] [ [top](#donate) ]
 
@@ -154,7 +154,7 @@ console.log(newPayInvoice);
 
 <br/>
 
-#### **Check Invoice**
+### **Check Invoice**
 
 [ [Example](examples/wallet.ts) ] [ [top](#donate) ]
 
@@ -174,7 +174,7 @@ console.log(checkinvoice);
 
 ### **User Manager**
 
-#### **Get Users**
+### **Get Users**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -185,7 +185,7 @@ console.log(users);
 
 <br/>
 
-#### **Get Wallets**
+### **Get Wallets**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -203,7 +203,7 @@ console.log(wallets);
 
 <br/>
 
-#### **Get Transactions**
+### **Get Transactions**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -221,7 +221,7 @@ console.log(tx);
 
 <br/>
 
-#### **Create User**
+### **Create User**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -243,7 +243,7 @@ console.log(user);
 
 <br/>
 
-#### **Delete User**
+### **Delete User**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -261,7 +261,7 @@ console.log(userDeleted);
 
 <br/>
 
-#### **Delete Wallet**
+### **Delete Wallet**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -279,7 +279,7 @@ console.log(walletDeleted);
 
 <br/>
 
-#### **Active Extension**
+### **Active Extension**
 
 [ [Example](examples/userManager.ts) ] [ [top](#donate) ]
 
@@ -303,7 +303,7 @@ console.log(extension);
 
 ### **Paywall**
 
-#### **Get Paywalls**
+### **Get Paywalls**
 
 [ [Example](examples/paywall.ts) ] [ [top](#donate) ]
 
@@ -314,7 +314,7 @@ console.log(paywalls);
 
 <br/>
 
-#### **Create Paywall**
+### **Create Paywall**
 
 [ [Example](examples/paywall.ts) ] [ [top](#donate) ]
 
@@ -340,7 +340,7 @@ console.log(paywallNew);
 
 <br/>
 
-#### **Create Invoice**
+### **Create Invoice**
 
 [ [Example](examples/paywall.ts) ] [ [top](#donate) ]
 
@@ -360,7 +360,7 @@ console.log(invoice);
 
 <br/>
 
-#### **Check Invoice**
+### **Check Invoice**
 
 [ [Example](examples/paywall.ts) ] [ [top](#donate) ]
 
@@ -381,7 +381,7 @@ console.log(invoiceCheck);
 
 <br/>
 
-#### **Delete Paywall**
+### **Delete Paywall**
 
 [ [Example](examples/paywall.ts) ] [ [top](#donate) ]
 
@@ -401,7 +401,7 @@ console.log(paywallDeleted);
 
 ### **Withdraw**
 
-#### **Get Links**
+### **Get Links**
 
 [ [Example](examples/withdraw.ts) ] [ [top](#donate) ]
 
@@ -414,7 +414,7 @@ console.log(withdrawLinks);
 
 <br/>
 
-#### **Create Link**
+### **Create Link**
 
 [ [Example](examples/withdraw.ts) ] [ [top](#donate) ]
 
@@ -442,7 +442,7 @@ console.log(link);
 
 <br/>
 
-#### **Update Link**
+### **Update Link**
 
 [ [Example](examples/withdraw.ts) ] [ [top](#donate) ]
 
@@ -472,7 +472,7 @@ console.log(linkUpdated);
 
 <br/>
 
-#### **Delete Link**
+### **Delete Link**
 
 [ [Example](examples/withdraw.ts) ] [ [top](#donate) ]
 
@@ -492,7 +492,7 @@ console.log(linkDeleted);
 
 ### **TPoS**
 
-#### **Get TPoS**
+### **Get TPoS**
 
 [ [Example](examples/tpos.ts) ] [ [top](#donate) ]
 
@@ -503,7 +503,7 @@ console.log(tposs);
 
 <br/>
 
-#### **Create TPoS**
+### **Create TPoS**
 
 [ [Example](examples/tpos.ts) ] [ [top](#donate) ]
 
@@ -523,7 +523,7 @@ console.log(tposNew);
 
 <br/>
 
-#### **Delete TPoS**
+### **Delete TPoS**
 
 [ [Example](examples/tpos.ts) ] [ [top](#donate) ]
 
