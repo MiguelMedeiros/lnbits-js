@@ -89,7 +89,9 @@ $ yarn add lnbits
 ### **Initial Configuration**
 
 ```javascript
-import LNBits from 'lnbits';
+const LNBits = require('lnbits').default; // using require
+
+import LNBits from 'lnbits'; // using import
 
 const { wallet, userManager, paywall, withdraw, paylink, tpos } = LNBits({
   adminKey: 'd00265e7de5f44f59b2408d9f0564181',
