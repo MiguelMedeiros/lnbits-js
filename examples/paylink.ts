@@ -5,7 +5,7 @@ const init = async () => {
   const { paylink } = LNBits({
     adminKey: 'e84b3c3941cc4e51b1b859c8a95aad3f',
     invoiceReadKey: 'b9f390e3b08547458ca016ff5d1c5483',
-    endpoint: 'https://lnbits.cosm', //default
+    endpoint: 'https://lnbits.com', //default
   });
 
   const paylinks = await paylink.getLinks();

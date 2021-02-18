@@ -11,16 +11,16 @@ interface LNBitsConfig {
   endpoint?: string;
 }
 
-interface LNBits {
+export default (
+  params: LNBitsConfig
+): {
   wallet: LNBitsWalletClass;
   userManager: LNBitsUserManagerClass;
   paywall: LNBitsPaywallClass;
   withdraw: LNBitsWithdrawClass;
   paylink: LNBitsPaylinkClass;
   tpos: LNBitsTPoSClass;
-}
-
-export default (params: LNBitsConfig): LNBits => {
+} => {
   return {
     wallet: new LNBitsWalletClass(params),
     userManager: new LNBitsUserManagerClass(params),
