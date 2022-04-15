@@ -62,6 +62,7 @@ export class LNBitsWalletClass {
       amount: number;
       memo: string;
       out?: boolean;
+      webhook?: string;
     } = {
       amount: 0,
       memo: '',
