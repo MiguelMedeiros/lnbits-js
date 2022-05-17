@@ -74,7 +74,7 @@ export class LNBitsUserManagerClass {
     admin_id: string;
     user_name: string;
     wallet_name: string;
-  }): Promise<Users[]> => {
+  }): Promise<Users> => {
     this.api.defaults.headers['X-Api-Key'] = this.invoiceReadKey;
     return await this.api
       .post(`/users`, params)
