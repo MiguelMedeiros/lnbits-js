@@ -14,6 +14,15 @@ interface Users {
   password: string;
 }
 
+interface Wallet {
+  id: string;
+  admin: string;
+  name: string;
+  user: string;
+  adminkey: string;
+  inkey: string;
+}
+
 export class LNBitsUserManagerClass {
   private invoiceReadKey = '';
   private endpoint = 'https://lnbits.com';
@@ -107,6 +116,18 @@ export class LNBitsUserManagerClass {
       })
       .catch(() => {
         return false;
+      });
+  };
+
+  createWallet = async (params: { user_id: string, admin_id: string, wallet_name: string }): Promise<Wallet> => {
+    this.api.defaults.headers['X-Api-Key'] = this.invoiceReadKey;
+    return await this.api
+      .post('/wallets/', params)
+      .then((res: Wallet) => {
+        return res;
+      })
+      .catch((err: AxiosError) => {
+        throw err;
       });
   };
 
