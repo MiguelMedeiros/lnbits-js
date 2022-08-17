@@ -62,13 +62,17 @@ export class LNBitsWalletClass {
       amount: number;
       memo: string;
       out?: boolean;
+      webhook?: string;
     } = {
       amount: 0,
-      memo: '',
+      memo: 'memo',
       out: false,
+      webhook: '',
     }
   ): Promise<CreateInvoice> => {
     this.api.defaults.headers['X-Api-Key'] = this.invoiceReadKey;
+    // lnbits does not like empty values
+    params['webhook']==='' && delete params['webhook'];
     return await this.api
       .post(`/payments`, params)
       .then((res: { data: CreateInvoice }) => {
