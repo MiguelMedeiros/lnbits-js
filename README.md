@@ -24,7 +24,7 @@ Help me to stack sats! :blush:
 
 [bc1qg2sm9tjqy35j50g0zf27s0e8fhflrame5d7q3s](bitcoin:bc1qg2sm9tjqy35j50g0zf27s0e8fhflrame5d7q3s)
 
-[Or donate via Lightning Network!](https://paywall.link/to/lnbits)
+[Or donate via Lightning Network!](https://miguelmedeiros.dev)
 
 ---
 
@@ -551,3 +551,4 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ---
 
 ## **License [MIT](https://choosealicense.com/licenses/mit/)**
+
