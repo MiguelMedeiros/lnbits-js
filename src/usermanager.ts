@@ -14,15 +14,6 @@ interface Users {
   password: string;
 }
 
-interface Wallet {
-  id: string;
-  admin: string;
-  name: string;
-  user: string;
-  adminkey: string;
-  inkey: string;
-}
-
 export class LNBitsUserManagerClass {
   private invoiceReadKey = '';
   private endpoint = 'https://lnbits.com';
@@ -83,15 +74,15 @@ export class LNBitsUserManagerClass {
     admin_id: string;
     user_name: string;
     wallet_name: string;
-  }): Promise<Users> => {
+  }): Promise<AxiosResponse> => {
     this.api.defaults.headers['X-Api-Key'] = this.invoiceReadKey;
     return await this.api
       .post(`/users`, params)
-      .then((res: { data: Users[] }) => {
+      .then((res) => {
         return res.data;
       })
-      .catch((err: { response: { data: { message: string } } }) => {
-        throw err.response.data.message;
+      .catch((err) => {
+        throw err;
       });
   };
 
@@ -119,11 +110,15 @@ export class LNBitsUserManagerClass {
       });
   };
 
-  createWallet = async (params: { user_id: string, admin_id: string, wallet_name: string }): Promise<Wallet> => {
+  createWallet = async (params: {
+    user_id: string;
+    admin_id: string;
+    wallet_name: string;
+  }): Promise<AxiosResponse> => {
     this.api.defaults.headers['X-Api-Key'] = this.invoiceReadKey;
     return await this.api
       .post('/wallets/', params)
-      .then((res: Wallet) => {
+      .then((res) => {
         return res;
       })
       .catch((err: AxiosError) => {
