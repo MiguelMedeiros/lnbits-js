@@ -15,11 +15,13 @@ interface Users {
 }
 
 export class LNBitsUserManagerClass {
+  private adminKey = '';
   private invoiceReadKey = '';
   private endpoint = 'https://lnbits.com';
   private api: AxiosInstance;
 
   constructor(params: LNBitsConfig) {
+    this.adminKey = params.adminKey;
     this.invoiceReadKey = params.invoiceReadKey;
     this.endpoint = params.endpoint || this.endpoint;
     this.api = axios.create({
@@ -59,7 +61,7 @@ export class LNBitsUserManagerClass {
   };
 
   getTransactions = async (params: { wallet_id: string }): Promise<Users[]> => {
-    this.api.defaults.headers['X-Api-Key'] = this.invoiceReadKey;
+    this.api.defaults.headers['X-Api-Key'] = this.adminKey;
     return await this.api
       .get(`/wallets/${params.wallet_id}`)
       .then((res: { data: Users[] }) => {
