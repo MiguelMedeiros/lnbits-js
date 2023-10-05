@@ -17,7 +17,7 @@ interface Users {
 export class LNBitsUserManagerClass {
   private adminKey = '';
   private invoiceReadKey = '';
-  private endpoint = 'https://lnbits.com';
+  private endpoint = 'https://legend.lnbits.com';
   private api: AxiosInstance;
 
   constructor(params: LNBitsConfig) {

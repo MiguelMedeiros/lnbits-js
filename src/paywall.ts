@@ -42,7 +42,7 @@ interface InvoiceCheck {
 export class LNBitsPaywallClass {
   private adminKey = '';
   private invoiceReadKey = '';
-  private endpoint = 'https://lnbits.com';
+  private endpoint = 'https://legend.lnbits.com';
   private api: AxiosInstance;
 
   constructor(params: LNBitsConfig) {

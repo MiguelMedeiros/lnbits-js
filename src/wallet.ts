@@ -30,7 +30,7 @@ interface CheckInvoice {
 export class LNBitsWalletClass {
   private adminKey = '';
   private invoiceReadKey = '';
-  private endpoint = 'https://lnbits.com';
+  private endpoint = 'https://legend.lnbits.com';
   private api: AxiosInstance;
 
   constructor(params: LNBitsConfig) {
@@ -63,11 +63,13 @@ export class LNBitsWalletClass {
       memo: string;
       out?: boolean;
       webhook?: string;
+      expiry?: number;
     } = {
       amount: 0,
       memo: 'memo',
       out: false,
       webhook: '',
+      // no default here because lnbits will use its own default
     }
   ): Promise<CreateInvoice> => {
     this.api.defaults.headers['X-Api-Key'] = this.invoiceReadKey;
